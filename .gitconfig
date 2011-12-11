@@ -1,0 +1,17 @@
+[user]
+    name  = Ryunosuke SATO
+    email = tricknotes.rs@gmail.com
+[alias]
+    a = add -p
+    s = status
+    c = commit -v
+    ck = checkout
+    df = diff
+    bc = branch
+    lo = log --pretty=oneline --graph
+[color]
+    ui = auto
+[github]
+    user = rsato
+[core]
+    excludesfile = ~/global.gitignore

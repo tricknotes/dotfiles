@@ -1,0 +1,6 @@
+defencoding UTF-8
+escape ^tt
+
+hardstatus on
+hardstatus alwayslastline "%H | %w%=%02c"
+termcapinfo xterm* ti@:te@
