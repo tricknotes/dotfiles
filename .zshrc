@@ -9,6 +9,7 @@ colors
 alias ls='ls -G'
 alias g='git'
 alias r='rails'
+alias n='npm'
 alias be='bundle exec'
 # alias V='| vi -R -'
 
