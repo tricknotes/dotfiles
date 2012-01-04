@@ -14,6 +14,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'mattn/lisper-vim'
 Bundle 'Shougo/unite.vim'
+Bundle 'vim-scripts/JavaScript-syntax'
 
 Bundle 'tricknotes/vim-qwik'
 
