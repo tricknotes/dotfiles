@@ -60,3 +60,7 @@ endif
 
 " Backspace で文字を削除できるようにする
 set backspace=indent,eol,start
+
+" highlight for watchr
+autocmd BufNewFile,BufRead *.watchr
+      \ set filetype=ruby
