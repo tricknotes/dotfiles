@@ -11,7 +11,8 @@ alias g='git'
 alias r='rails'
 alias n='npm'
 alias be='bundle exec'
-# alias V='| vi -R -'
+alias -g V='| vi -R -'
+alias -g C="| pbcopy"
 
 # alias vp='vimpager'
 
