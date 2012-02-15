@@ -142,7 +142,8 @@ function vcs_info_with_color() {
 }
 ## PROMPT
 EXIT_PROMPT="%(?.%?.%{%B%}%K{red}%?%{%k%}%{%b%}"
-PROMPT="[%n@%m]%{${fg[green]}%}%(!.#.$)%{${reset_color}%} "
+# PROMPT="[%n@%m]%{${fg[green]}%}%(!.#.$)%{${reset_color}%} "
+PROMPT="   λ %{${fg[green]}%}%(!.#.:)%{${reset_color}%} "
 RPROMPT='[%~]$(vcs_info_with_color)$EXIT_PROMPT'
 
 # vi 風のキーバインド
