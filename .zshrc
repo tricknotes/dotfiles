@@ -34,6 +34,10 @@ function cd() {
   ls
 }
 
+# for nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+nodebrew use 0.6.10
+
 # ヒストリ
 ## ヒストリを保存するファイル
 HISTFILE=~/.zsh_history
