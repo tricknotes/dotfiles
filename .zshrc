@@ -35,6 +35,10 @@ function cd() {
   ls
 }
 
+# for rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+
 # for nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 nodebrew use 0.6.18
