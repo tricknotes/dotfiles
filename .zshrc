@@ -14,6 +14,9 @@ alias c='coffee'
 alias be='bundle exec'
 alias -g V='| vi -R -'
 alias -g C="| pbcopy"
+alias -g L="| lv"
+# https://github.com/zpoley/json-command
+alias -g J="| json"
 
 # alias vp='vimpager'
 
