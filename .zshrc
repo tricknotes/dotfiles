@@ -22,8 +22,11 @@ alias -g J="| json"
 alias emoji='open http://www.emoji-cheat-sheet.com/'
 
 function alc() {
-  if test $@; then
-    open "http://eow.alc.co.jp/search?q=$@"
+  if test "$0"; then
+    for query in "$@"
+    do
+      open "http://eow.alc.co.jp/search?q=$query"
+    done
   else
     open "http://www.alc.co.jp/"
   fi
