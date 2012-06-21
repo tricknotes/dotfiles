@@ -47,7 +47,7 @@ eval "$(rbenv init -)"
 
 # for nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-nodebrew use 0.6.18
+nodebrew use 0.6.19
 
 # ヒストリ
 ## ヒストリを保存するファイル
