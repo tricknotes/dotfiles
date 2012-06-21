@@ -21,6 +21,14 @@ alias -g J="| json"
 
 alias emoji='open http://www.emoji-cheat-sheet.com/'
 
+function alc() {
+  if test $@; then
+    open "http://eow.alc.co.jp/search?q=$@"
+  else
+    open "http://www.alc.co.jp/"
+  fi
+}
+
 # alias vp='vimpager'
 
 # for homebrew-alt
