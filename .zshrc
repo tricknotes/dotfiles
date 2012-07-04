@@ -13,6 +13,7 @@ alias o='open'
 alias n='npm'
 alias c='coffee'
 alias be='bundle exec'
+alias rg='killall GrowlHelperApp && open -a GrowlHelperApp' # restart growl
 alias -g V='| vi -R -'
 alias -g C="| pbcopy"
 alias -g L="| lv"
