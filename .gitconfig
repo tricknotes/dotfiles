@@ -9,6 +9,7 @@
     df = diff
     bc = branch
     lo = log --pretty=oneline --graph
+    rclean = "!for branch in `git branch -r`; do git branch -rd $branch 2>/dev/null; done"
 [color]
     ui = auto
 [github]
