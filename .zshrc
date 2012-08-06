@@ -88,6 +88,9 @@ fpath=(~/.zsh.d/zsh-completions $fpath)
 autoload -U compinit
 compinit
 
+# for mosh
+compdef mosh=ssh
+
 # for https://github.com/zsh-users/zsh-syntax-highlighting
 # source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
