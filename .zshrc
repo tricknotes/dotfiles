@@ -83,7 +83,7 @@ setopt inc_append_history
 setopt no_flow_control
 
 # 拡張補完 for git://github.com/zsh-users/zsh-completions.git
-fpath=(~/.zsh.d/zsh-completions $fpath)
+fpath=(~/.zsh.d/zsh-completions/src $fpath)
 # コマンドに応じた補完
 autoload -U compinit
 compinit
