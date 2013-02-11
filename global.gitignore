@@ -1,5 +1,5 @@
 *.swp
 .DS_Store
-.rbenv-version
+.ruby-version
 .powenv
 .sass-cache
