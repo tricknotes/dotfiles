@@ -10,6 +10,19 @@
     bc = branch
     lo = log --pretty=oneline --graph
     rclean = "!for branch in `git branch -r`; do git branch -rd $branch 2>/dev/null; done"
+    home = "!if test \"$1\"; then remote=$1; else remote=origin; fi; \
+      git remote show $remote -n | \
+      grep 'Fetch URL' | \
+      sed -E 's/^[[:space:]]+Fetch URL:[[:space:]]| \\(fetch\\)$//g' | \
+      ruby -e 'STDIN.each {|line| \
+        line = if line[%(@)]; \
+          line.sub(/:/, %(/)).sub(/^.+@|/, %(http://)); \
+        else \
+          line.sub(/^(git|http|https):/, %(http:)); \
+        end; \
+        puts line.sub(/\\.git$/, %()) \
+      }' | \
+      ruby -e 'STDIN.each {|url| `open #{url}` }'"
 [color]
     ui = auto
 [github]
