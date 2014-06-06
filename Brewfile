@@ -1,5 +1,6 @@
 install git
 install go
+install heroku-toolbelt
 install lv
 install mosh
 install mysql
