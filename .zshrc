@@ -130,3 +130,6 @@ fi
 if [ `brew --prefix z 2> /dev/null` ]; then
   . `/usr/local/bin/brew --prefix z`/etc/profile.d/z.sh
 fi
+## Go
+export GOPATH=~/
+PATH=$PATH:$GOPATH/bin
