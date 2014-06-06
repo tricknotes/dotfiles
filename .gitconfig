@@ -1,5 +1,5 @@
 [user]
-    name  = Ryunosuke SATO
+    name = Ryunosuke SATO
     email = tricknotes.rs@gmail.com
 [alias]
     a = add -p
@@ -25,7 +25,7 @@
       ruby -e 'STDIN.each {|url| `open #{url}` }'"
 [color]
     ui = auto
-[github]
-    user = rsato
 [core]
     excludesfile = ~/global.gitignore
+[push]
+    default = tracking
