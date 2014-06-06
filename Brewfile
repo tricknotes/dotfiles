@@ -1,10 +1,14 @@
 install git
 install go
 install heroku-toolbelt
+install icu4c
+install imagemagick
 install lv
+install mongodb
 install mosh
 install mysql
 install nodebrew
+install phantomjs
 install postgresql
 install python
 install qt
