@@ -10,6 +10,7 @@ install mysql
 install nodebrew
 install phantomjs
 install postgresql
+install pwgen
 install python
 install qt
 install rbenv
