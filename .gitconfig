@@ -29,3 +29,5 @@
     excludesfile = ~/global.gitignore
 [push]
     default = tracking
+[ghq]
+    root = ~/src
