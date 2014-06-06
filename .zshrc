@@ -1,29 +1,33 @@
-# for prompt
+# Prompt
 setopt prompt_subst
 setopt prompt_percent
 setopt transient_rprompt
 autoload -U colors
 colors
-# PROMPT="%m %~%{${fg[green]}%}%(!.#.$)%{${reset_color}%} "
 
-alias ls='ls -G'
-alias g='git'
-alias r='rails'
-alias o='open'
-alias n='npm'
-alias c='coffee'
+EXIT_PROMPT="%(?.%?.%{%B%}%K{red}%?%{%k%}%{%b%}"
+PROMPT="   λ %{${fg[green]}%}%(!.#.:)%{${reset_color}%} "
+RPROMPT='[%~]$(vcs_info_with_color)$EXIT_PROMPT'
+
+# Aliases
 alias be='bundle exec'
-alias rg='killall GrowlHelperApp && open -a GrowlHelperApp' # restart growl
-alias -g V='| vi -R -'
+alias c='coffee'
+alias g='git'
+alias ls='ls -G'
+alias n='npm'
+alias o='open'
+alias r='rails'
+alias reload='source ~/.zshrc'
+
 alias -g C="| pbcopy"
-alias -g L="| lv"
-# https://github.com/zpoley/json-command
 alias -g J="| json"
+alias -g L="| lv"
+alias -g V='| vi -R -'
 
 alias emoji='open http://www.emoji-cheat-sheet.com/'
 
 function alc() {
-  if test "$0"; then
+  if test "$@"; then
     for query in "$@"
     do
       open "http://eow.alc.co.jp/search?q=$query"
@@ -33,80 +37,30 @@ function alc() {
   fi
 }
 
-# alias vp='vimpager'
-
-# for homebrew-alt
-alias gdb='/usr/local/Cellar/gdb/7.3/bin/gdb'
-# alias vim='/usr/local/Cellar/vim/7.3.333/bin/vim'
-# alias vi='/usr/local/Cellar/vim/7.3.333/bin/vim'
-
-# for vimpager
-# export PAGER=`which vimpager`
-# alias less=$PAGER
-# alias zless=$PAGER
-
-# git で 独自に入れた vi 使おうとすると落ちるので、とりあえずデフォルトを使うようにしている
-export EDITOR=/usr/bin/vi
-
-function cd() {
-  builtin cd "$@"
-  ls
-}
-
-# for rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
-
-# for nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-nodebrew use 0.8.15
-
-# ヒストリ
-## ヒストリを保存するファイル
+# History
 HISTFILE=~/.zsh_history
-## メモリ上のヒストリ数。
-## 大きな数を指定してすべてのヒストリを保存するようにしている。
 HISTSIZE=10000000
-## 保存するヒストリ数
 SAVEHIST=$HISTSIZE
-## ヒストリファイルにコマンドラインだけではなく実行時刻と実行時間も保存する。
 setopt extended_history
-## 同じコマンドラインを連続で実行した場合はヒストリに登録しない。
 setopt hist_ignore_dups
-## スペースで始まるコマンドラインはヒストリに追加しない。
 setopt hist_ignore_space
-## すぐにヒストリファイルに追記する。
 setopt inc_append_history
-## zshプロセス間でヒストリを共有する。
-# setopt share_history
-## C-sでのヒストリ検索が潰されてしまうため、出力停止・開始用にC-s/C-qを使わない。
-setopt no_flow_control
 
-# 拡張補完 for git://github.com/zsh-users/zsh-completions.git
-fpath=(~/.zsh.d/zsh-completions/src $fpath)
-# コマンドに応じた補完
+# Competition
+# fpath=(~/.zsh.d/zsh-completions/src $fpath)
+fpath=(/usr/local/share/zsh/site-functions $fpath)
+zstyle ':completion:*:default' menu select=2 
 autoload -U compinit
 compinit
 
-# for mosh
-compdef mosh=ssh
+zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
-# for https://github.com/zsh-users/zsh-syntax-highlighting
-# source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# VSC のブランチを右側に表示する
-# for vcs info
+# VSC
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '(%s)-%b'
 zstyle ':vcs_info:*' actionformats '(%s)-%b|%a'
-# function precmd () {
-#   psvar=()
-#   LANG=en_US.UTF-8 vcs_info
-#   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-# }
-# add-zsh-hook precmd _precmd_vcs_info
-# RPROMPT="%1(v|%F{green}%1v%f|)"
+
 function _precmd_vcs_info() {
   LANG=en_US.UTF-8 vcs_info
 }
@@ -166,16 +120,13 @@ function vcs_info_with_color() {
     echo "${VCS_PROMPT_PREFIX}${STATUS}${VCS_PROMPT_SUFFIX}"
   fi
 }
-## PROMPT
-EXIT_PROMPT="%(?.%?.%{%B%}%K{red}%?%{%k%}%{%b%}"
-# PROMPT="[%n@%m]%{${fg[green]}%}%(!.#.$)%{${reset_color}%} "
-PROMPT="   λ %{${fg[green]}%}%(!.#.:)%{${reset_color}%} "
-RPROMPT='[%~]$(vcs_info_with_color)$EXIT_PROMPT'
 
-# vi 風のキーバインド
-# bindkey -v
-# Emacs 風のキーバインド
-bindkey -e
-
-# 自動補完の際に ls コマンドと色をそろえる
-zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+# Others
+## rbenv
+if which rbenv > /dev/null; then
+  eval "$(rbenv init - zsh)"
+fi
+## z
+if [ `brew --prefix z 2> /dev/null` ]; then
+  . `/usr/local/bin/brew --prefix z`/etc/profile.d/z.sh
+fi
