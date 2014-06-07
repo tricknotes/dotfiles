@@ -138,3 +138,5 @@ fi
 ## Go
 export GOPATH=~/
 PATH=$PATH:$GOPATH/bin
+## ievms
+export IEVMS_VERSIONS="8"

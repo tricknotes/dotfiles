@@ -2,6 +2,7 @@ install git
 install go
 install heroku-toolbelt
 install icu4c
+install ievms
 install imagemagick
 install lv
 install mongodb
