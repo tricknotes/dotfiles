@@ -24,7 +24,7 @@ install z
 install zsh
 
 tap caskroom/homebrew-cask
-install brew-cask
+install brew-cask || true
 
 cask install vagrant
 cask install virtualbox
