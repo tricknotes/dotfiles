@@ -18,6 +18,7 @@ alias n='npm'
 alias o='open'
 alias r='rails'
 alias reload='source ~/.zshrc'
+alias format_json="node -e \"console.log(JSON.stringify(JSON.parse(require('fs').readFileSync('/dev/stdin', 'utf8')), null, 2))\""
 
 alias -g C="| pbcopy"
 alias -g J="| json"
@@ -123,8 +124,12 @@ function vcs_info_with_color() {
 
 # Others
 ## rbenv
-if which rbenv > /dev/null; then
+if which rbenv > /dev/null 2>&1; then
   eval "$(rbenv init - zsh)"
+fi
+## nodebrew
+if which nodebrew > /dev/null 2>&1; then
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
 ## z
 if [ `brew --prefix z 2> /dev/null` ]; then
