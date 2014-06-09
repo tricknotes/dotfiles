@@ -26,6 +26,8 @@ install zsh
 tap caskroom/homebrew-cask
 install brew-cask || true
 
-cask install skype
-cask install vagrant
-cask install virtualbox
+cask install google-japanese-ime || true
+cask install google-hangouts || true
+cask install skype || true
+cask install vagrant || true
+cask install virtualbox || true
