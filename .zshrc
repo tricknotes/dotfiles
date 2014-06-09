@@ -48,9 +48,11 @@ setopt hist_ignore_space
 setopt inc_append_history
 
 # Competition
-# fpath=(~/.zsh.d/zsh-completions/src $fpath)
 fpath=(/usr/local/share/zsh/site-functions $fpath)
-zstyle ':completion:*:default' menu select=2 
+zstyle ':completion:*:default' menu select=2
+if [ `brew --prefix zsh-completions 2> /dev/null` ]; then
+  fpath=(/usr/local/share/zsh-completions $fpath)
+fi
 autoload -U compinit
 compinit
 

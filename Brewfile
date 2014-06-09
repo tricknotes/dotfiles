@@ -22,6 +22,7 @@ install tig
 install tree
 install z
 install zsh
+install zsh-completions
 
 tap caskroom/homebrew-cask
 install brew-cask || true
