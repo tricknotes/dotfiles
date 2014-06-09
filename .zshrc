@@ -140,3 +140,5 @@ export GOPATH=~/
 PATH=$PATH:$GOPATH/bin
 ## ievms
 export IEVMS_VERSIONS="8"
+## Git
+export EDITOR=vim # not `vi`
