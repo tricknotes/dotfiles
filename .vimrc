@@ -1,52 +1,39 @@
-" set up for vumble [see: https://github.com/gmarik/vundle ]
+" Vundle: https://github.com/gmarik/Vundle.vim
+set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'vim-scripts/jade.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'mattn/lisper-vim'
-Bundle 'Shougo/unite.vim'
-Bundle 'vim-scripts/JavaScript-syntax'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'vim-scripts/JavaScript-syntax'
 
-Bundle 'tricknotes/vim-qwik'
-
+call vundle#end()
 filetype plugin indent on
 
-" 行番号表示
 set number
-" シンタックスハイライトを利用
 syntax on
-" 改行時に自動インデントを行う
 set autoindent
-" vi互換モードを利用しない
 set nocompatible
-" 不可視文字を表示
 set list
 set listchars=eol:-
-" 検索時に大文字/小文字を判別する
 set smartcase
 
-" <Tab>周りの設定
 set smarttab
 set tabstop=2
-" <Tab>を展開する
 set expandtab
 set shiftwidth=2
 
-" 末尾空白文字を判別する
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
 if has("syntax")
-" 全角スペースをハイライト
   syntax on
   function! ActivateInvisibleIndicator()
     syntax match InvisibleJISX0208Space "　" display containedin=ALL
@@ -58,9 +45,4 @@ if has("syntax")
   augroup END
 endif
 
-" Backspace で文字を削除できるようにする
 set backspace=indent,eol,start
-
-" highlight for watchr
-autocmd BufNewFile,BufRead *.watchr
-      \ set filetype=ruby
