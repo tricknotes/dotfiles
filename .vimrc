@@ -13,6 +13,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-scripts/JavaScript-syntax'
+Plugin 'nono/vim-handlebars'
 
 call vundle#end()
 filetype plugin indent on
