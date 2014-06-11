@@ -1,3 +1,5 @@
+install ffmpeg
+install ffmpegthumbnailer
 install git
 install go
 install heroku-toolbelt
