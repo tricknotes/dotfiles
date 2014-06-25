@@ -47,17 +47,6 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt inc_append_history
 
-# Competition
-fpath=(/usr/local/share/zsh/site-functions $fpath)
-zstyle ':completion:*:default' menu select=2
-if [ `brew --prefix zsh-completions 2> /dev/null` ]; then
-  fpath=(/usr/local/share/zsh-completions $fpath)
-fi
-autoload -U compinit
-compinit
-
-zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-
 # VSC
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
@@ -138,9 +127,23 @@ if [ `brew --prefix z 2> /dev/null` ]; then
   . `/usr/local/bin/brew --prefix z`/etc/profile.d/z.sh
 fi
 ## Go
-export GOPATH=~/
+export GOPATH=~
 PATH=$PATH:$GOPATH/bin
 ## ievms
 export IEVMS_VERSIONS="8"
 ## Git
 export EDITOR=vim # not `vi`
+
+# Competition
+fpath=(/usr/local/share/zsh/site-functions $fpath)
+zstyle ':completion:*:default' menu select=2
+if [ `brew --prefix zsh-completions 2> /dev/null` ]; then
+  fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+if which ghq > /dev/null 2>&1; then
+  fpath=($GOPATH/src/github.com/motemen/ghq/zsh $fpath)
+fi
+autoload -U compinit
+compinit
+
+zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
