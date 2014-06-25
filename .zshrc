@@ -124,7 +124,7 @@ if which nodebrew > /dev/null 2>&1; then
 fi
 ## z
 if [ `brew --prefix z 2> /dev/null` ]; then
-  . `/usr/local/bin/brew --prefix z`/etc/profile.d/z.sh
+  . `brew --prefix z`/etc/profile.d/z.sh
 fi
 ## Go
 export GOPATH=~
@@ -135,10 +135,10 @@ export IEVMS_VERSIONS="8"
 export EDITOR=vim # not `vi`
 
 # Competition
-fpath=(/usr/local/share/zsh/site-functions $fpath)
+fpath=(`brew --prefix`/share/zsh/site-functions $fpath)
 zstyle ':completion:*:default' menu select=2
 if [ `brew --prefix zsh-completions 2> /dev/null` ]; then
-  fpath=(/usr/local/share/zsh-completions $fpath)
+  fpath=(`brew --prefix`/share/zsh-completions $fpath)
 fi
 if which ghq > /dev/null 2>&1; then
   fpath=($GOPATH/src/github.com/motemen/ghq/zsh $fpath)
