@@ -29,8 +29,9 @@ install zsh-completions
 tap caskroom/homebrew-cask
 install brew-cask || true
 
-cask install google-japanese-ime || true
+cask install firefox || true
 cask install google-hangouts || true
+cask install google-japanese-ime || true
 cask install skype || true
 cask install vagrant || true
 cask install virtualbox || true
