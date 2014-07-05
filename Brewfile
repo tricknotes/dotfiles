@@ -1,3 +1,4 @@
+install chromedriver
 install ffmpeg
 install ffmpegthumbnailer
 install git
@@ -22,6 +23,7 @@ install ruby-build
 install sqlite
 install tig
 install tree
+install watch
 install z
 install zsh
 install zsh-completions
@@ -29,6 +31,8 @@ install zsh-completions
 tap caskroom/homebrew-cask
 install brew-cask || true
 
+cask install atom || true
+cask install brackets || true
 cask install firefox || true
 cask install google-hangouts || true
 cask install google-japanese-ime || true
