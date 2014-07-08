@@ -1,4 +1,5 @@
 install chromedriver
+install cmake
 install ffmpeg
 install ffmpegthumbnailer
 install git
@@ -7,6 +8,7 @@ install heroku-toolbelt
 install icu4c
 install ievms
 install imagemagick
+install libmagic
 install lv
 install mongodb
 install mosh
