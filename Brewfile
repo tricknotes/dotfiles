@@ -38,6 +38,7 @@ cask install brackets || true
 cask install firefox || true
 cask install google-hangouts || true
 cask install google-japanese-ime || true
+cask install java || true
 cask install skype || true
 cask install vagrant || true
 cask install virtualbox || true
