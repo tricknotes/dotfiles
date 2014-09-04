@@ -133,6 +133,8 @@ PATH=$PATH:$GOPATH/bin
 export IEVMS_VERSIONS="8"
 ## Git
 export EDITOR=vim # not `vi`
+## Packages installed via brew
+export PATH=/usr/local/bin:$PATH
 
 # Competition
 fpath=(`brew --prefix`/share/zsh/site-functions $fpath)
