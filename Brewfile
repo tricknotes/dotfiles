@@ -1,5 +1,6 @@
 install chromedriver
 install cmake
+install erlang
 install ffmpeg
 install ffmpegthumbnailer
 install git
