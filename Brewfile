@@ -14,6 +14,7 @@ install lv
 install mongodb
 install mosh
 install mysql
+install ncdu
 install nodebrew
 install phantomjs
 install postgresql
@@ -26,6 +27,7 @@ install ruby-build
 install sqlite
 install tig
 install tree
+install ttyrec
 install watch
 install z
 install zsh
@@ -35,6 +37,7 @@ tap caskroom/homebrew-cask
 install brew-cask || true
 
 cask install atom || true
+cask install licecap || true
 cask install brackets || true
 cask install firefox || true
 cask install google-hangouts || true
