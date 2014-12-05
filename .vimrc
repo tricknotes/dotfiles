@@ -7,13 +7,15 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'elzr/vim-json'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'vim-scripts/JavaScript-syntax'
-Plugin 'nono/vim-handlebars'
+Plugin 'tpope/vim-surround'
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()
 filetype plugin indent on
