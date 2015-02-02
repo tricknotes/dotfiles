@@ -19,6 +19,8 @@ alias o='open'
 alias r='rails'
 alias reload='source ~/.zshrc'
 alias format_json="node -e \"console.log(JSON.stringify(JSON.parse(require('fs').readFileSync('/dev/stdin', 'utf8')), null, 2))\""
+alias nom='npm cache clear && rm -rf node_modules && npm install'
+alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'
 
 alias -g C="| pbcopy"
 alias -g J="| json"
