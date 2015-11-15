@@ -11,7 +11,6 @@ RPROMPT='[%~]$(vcs_info_with_color)$EXIT_PROMPT'
 
 # Aliases
 alias be='bundle exec'
-alias c='coffee'
 alias g='git'
 alias ls='ls -G'
 alias n='npm'
