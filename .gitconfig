@@ -9,6 +9,7 @@
     df = diff
     bc = branch
     lo = log --pretty=oneline --graph
+    fixup = commit --amend --no-edit
     rclean = "!for branch in `git branch -r`; do git branch -rd $branch 2>/dev/null; done"
     home = "!if test \"$1\"; then remote=$1; else remote=origin; fi; \
       git remote show $remote -n | \
