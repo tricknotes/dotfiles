@@ -16,6 +16,7 @@ alias ls='ls -G'
 alias n='npm'
 alias o='open'
 alias r='rails'
+alias e='ember'
 alias reload='source ~/.zshrc'
 alias format_json="node -e \"console.log(JSON.stringify(JSON.parse(require('fs').readFileSync('/dev/stdin', 'utf8')), null, 2))\""
 alias nom='npm cache clear && rm -rf node_modules && npm install'
