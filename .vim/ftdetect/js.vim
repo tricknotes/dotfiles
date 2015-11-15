@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.es6,*.es6module setf javascript
+au BufNewFile,BufRead *.es6 setf javascript
