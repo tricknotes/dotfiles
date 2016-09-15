@@ -1,2 +1,4 @@
 --skip-turbolinks
 --skip-spring
+--skip-test
+--database=postgresql
