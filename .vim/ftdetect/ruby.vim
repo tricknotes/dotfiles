@@ -1,1 +1,1 @@
-au BufNewFile,BufRead config.ru,Capfile,Appraisals,*.gemfile,Vendorfile,*.rabl setf ruby
+au BufNewFile,BufRead config.ru,Capfile,Appraisals,*.gemfile,Vendorfile,*.rabl,*.axlsx setf ruby
