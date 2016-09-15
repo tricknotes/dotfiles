@@ -154,3 +154,8 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
+# direnv
+if which direnv > /dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
