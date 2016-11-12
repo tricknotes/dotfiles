@@ -4,4 +4,5 @@
 .ruby-version
 .powenv
 .sass-cache
+.envrc
 .bundle
