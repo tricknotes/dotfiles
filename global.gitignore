@@ -6,3 +6,4 @@
 .sass-cache
 .envrc
 .bundle
+yarn-error.log
