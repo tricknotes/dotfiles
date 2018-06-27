@@ -1,3 +1,4 @@
+--skip-bootsnap
 --skip-turbolinks
 --skip-spring
 --skip-action-cable
