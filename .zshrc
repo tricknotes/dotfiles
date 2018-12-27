@@ -160,4 +160,9 @@ if which direnv > /dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
+# for my local config
+if ls ~/.zsh.d > /dev/null 2>&1; then
+  source ~/.zsh.d/*
+fi
+
 export PATH="$HOME/.yarn/bin:$PATH"
