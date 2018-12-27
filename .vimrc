@@ -11,6 +11,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'elzr/vim-json'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -32,6 +33,10 @@ set smarttab
 set tabstop=2
 set expandtab
 set shiftwidth=2
+
+set noswapfile
+
+let g:jsx_ext_required = 0 " To apply jsx syntax highlight to '.js'
 
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
