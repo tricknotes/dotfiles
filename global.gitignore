@@ -7,3 +7,4 @@
 .envrc
 .bundle
 yarn-error.log
+.vscode
