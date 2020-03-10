@@ -54,3 +54,5 @@ if has("syntax")
 endif
 
 set backspace=indent,eol,start
+
+colorscheme default
