@@ -1,0 +1,9 @@
+ROOT=~/src/github.com/tricknotes/dotfiles/
+
+ln -s $ROOT/.vimrc ~/.vimrc
+ln -s $ROOT/.zshrc ~/.zshrc
+ln -s $ROOT/global.gitignore ~/global.gitignore
+
+cp $ROOT/.lv ~/.lv
+cp $ROOT/.irbrc ~/.irbrc
+cp $ROOT/.railsrc ~/.railsrc
