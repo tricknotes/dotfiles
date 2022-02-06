@@ -1,15 +1,10 @@
 call plug#begin()
 
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'elzr/vim-json'
-Plug 'kchmck/vim-coffee-script'
-Plug 'mattn/vim-lsp-settings'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'prabirshrestha/vim-lsp'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'junegunn/vim-easy-align'
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
 Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 
@@ -30,7 +25,18 @@ set shiftwidth=2
 
 set noswapfile
 
-let g:jsx_ext_required = 0 " To apply jsx syntax highlight to '.js'
+let g:coc_global_extensions = [
+  \ 'coc-solargraph',
+  \ 'coc-actions',
+  \ 'coc-tsserver',
+  \ 'coc-css',
+  \ 'coc-json',
+  \ 'coc-html',
+  \ 'coc-vimlsp',
+  \ 'coc-highlight',
+  \ 'coc-ember',
+  \ 'coc-markmap'
+\ ]
 
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
