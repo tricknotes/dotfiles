@@ -1,27 +1,19 @@
-" Vundle: https://github.com/gmarik/Vundle.vim
-set nocompatible
-filetype off
+call plug#begin()
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'elzr/vim-json'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mattn/vim-lsp-settings'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
 
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'elzr/vim-json'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mattn/vim-lsp-settings'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 set number
 syntax on
