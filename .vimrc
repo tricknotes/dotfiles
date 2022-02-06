@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-scripts/Lucius'
 Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'junegunn/vim-easy-align'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
@@ -11,7 +12,6 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 set number
-syntax on
 set autoindent
 set nocompatible
 set list
@@ -61,4 +61,10 @@ endif
 
 set backspace=indent,eol,start
 
-colorscheme default
+let g:lucius_contrast = 'high'
+let g:lucius_contrast_bg = 'high'
+let g:lucius_style = 'dark'
+
+colorscheme lucius
+
+highlight LineNr ctermfg=grey
