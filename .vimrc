@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'jonathanfilip/vim-lucius'
 Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-indent'
@@ -11,7 +12,6 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/Lucius'
 
 call plug#end()
 
