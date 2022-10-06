@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'jonathanfilip/vim-lucius'
 Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'junegunn/vim-easy-align'
