@@ -19,7 +19,6 @@ alias r='rails'
 alias e='ember'
 alias dc='docker-compose'
 alias reload='source ~/.zshrc'
-alias format_json="node -e \"console.log(JSON.stringify(JSON.parse(require('fs').readFileSync('/dev/stdin', 'utf8')), null, 2))\""
 alias nom='npm cache clear && rm -rf node_modules && npm install'
 alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'
 
@@ -27,19 +26,6 @@ alias -g C="| pbcopy"
 alias -g J="| json"
 alias -g L="| lv"
 alias -g V='| vi -R -'
-
-alias emoji='open http://www.emoji-cheat-sheet.com/'
-
-function alc() {
-  if test "$@"; then
-    for query in "$@"
-    do
-      open "http://eow.alc.co.jp/search?q=$query"
-    done
-  else
-    open "http://www.alc.co.jp/"
-  fi
-}
 
 # History
 HISTFILE=~/.zsh_history
@@ -121,10 +107,6 @@ function vcs_info_with_color() {
 if which rbenv > /dev/null 2>&1; then
   eval "$(rbenv init - zsh)"
 fi
-## nodebrew
-if which nodebrew > /dev/null 2>&1; then
-  export PATH=$HOME/.nodebrew/current/bin:$PATH
-fi
 ## z
 if [ `brew --prefix z 2> /dev/null` ]; then
   . `brew --prefix z`/etc/profile.d/z.sh
@@ -132,10 +114,8 @@ fi
 ## Go
 export GOPATH=~
 PATH=$PATH:$GOPATH/bin
-## ievms
-export IEVMS_VERSIONS="8"
 ## Git
-export EDITOR=vim # not `vi`
+export EDITOR=nvim # not `vi`
 ## Packages installed via brew
 export PATH=/usr/local/bin:$PATH
 
@@ -152,9 +132,6 @@ autoload -U compinit
 compinit
 
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-
-# added by travis gem
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # direnv
 if which direnv > /dev/null 2>&1; then
