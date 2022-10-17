@@ -8,6 +8,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-user'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-eunuch'
@@ -63,6 +65,9 @@ if has("syntax")
     autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
   augroup END
 endif
+
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-g> <cmd>Telescope live_grep<cr>
 
 set backspace=indent,eol,start
 
