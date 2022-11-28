@@ -26,8 +26,6 @@
       ruby -e 'STDIN.each {|url| `open #{url}` }'"
 [color]
     ui = auto
-[core]
-    excludesfile = ~/global.gitignore
 [push]
     default = tracking
 [ghq]
