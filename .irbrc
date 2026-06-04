@@ -1,5 +1,6 @@
 IRB.conf[:SAVE_HISTORY] = 100000
 IRB.conf[:USE_AUTOCOMPLETE] = false
+IRB.conf[:SHOW_BANNER] = false
 
 autoload :CGI, 'cgi'
 autoload :CSV, 'csv'
